@@ -1,0 +1,11 @@
+﻿Attempting to gather dependencies information for package 'PagedList.Mvc.4.5.0' with respect to project 'Canducci.EntityFramework.Repository452', targeting '.NETFramework,Version=v4.5.2'
+Attempting to resolve dependencies for package 'PagedList.Mvc.4.5.0' with DependencyBehavior 'Lowest'
+Resolving actions to install package 'PagedList.Mvc.4.5.0'
+Resolved actions to install package 'PagedList.Mvc.4.5.0'
+Package 'PagedList.1.17.0' already exists in folder 'D:\PackageNet\Canducci.EntityFramework.Repository\packages'
+Added package 'PagedList.1.17.0' to 'packages.config'
+Successfully installed 'PagedList 1.17.0' to Canducci.EntityFramework.Repository452
+Package 'PagedList.Mvc.4.5.0' already exists in folder 'D:\PackageNet\Canducci.EntityFramework.Repository\packages'
+Added package 'PagedList.Mvc.4.5.0' to 'packages.config'
+Successfully installed 'PagedList.Mvc 4.5.0' to Canducci.EntityFramework.Repository452
+========== Finished ==========

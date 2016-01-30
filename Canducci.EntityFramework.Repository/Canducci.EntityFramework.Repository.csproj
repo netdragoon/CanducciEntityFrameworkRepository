@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3D754D3C-36DA-4834-981A-897A2556CD01}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Canducci.EntityFramework.Repository</RootNamespace>
+    <AssemblyName>Canducci.EntityFramework.Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET45</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NET45</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contracts\Interfaces\IAdd.cs" />
+    <Compile Include="Contracts\Interfaces\IAll.cs" />
+    <Compile Include="Contracts\Interfaces\IConfiguration.cs" />
+    <Compile Include="Contracts\Interfaces\ICount.cs" />
+    <Compile Include="Contracts\Interfaces\ICreate.cs" />
+    <Compile Include="Contracts\Interfaces\IDelete.cs" />
+    <Compile Include="Contracts\Interfaces\IEdit.cs" />
+    <Compile Include="Contracts\Interfaces\IFind.cs" />
+    <Compile Include="Contracts\Interfaces\IGroupOrderBy.cs" />
+    <Compile Include="Contracts\Interfaces\IGroupWhere.cs" />
+    <Compile Include="Contracts\Interfaces\ILists.cs" />
+    <Compile Include="Contracts\Interfaces\IPagination.cs" />
+    <Compile Include="Contracts\Interfaces\IQuery.cs" />
+    <Compile Include="Contracts\Interfaces\IQueryCommand.cs" />
+    <Compile Include="Contracts\Interfaces\ISave.cs" />
+    <Compile Include="Contracts\Interfaces\ISelect.cs" />
+    <Compile Include="Contracts\IRepository.cs" />
+    <Compile Include="Contracts\Interfaces\ISum.cs" />
+    <Compile Include="Contracts\Repository.cs" />
+    <Compile Include="Contracts\Interfaces\IGroupBy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\ConfigurationOrderBy.cs" />
+    <Compile Include="Util\ConfigurationOrderByLimit.cs" />
+    <Compile Include="Util\ConfigurationOrderByPagination.cs" />
+    <Compile Include="Util\ConfigurationOrderByPaginationSelect.cs" />
+    <Compile Include="Util\ConfigurationOrderBySelect.cs" />
+    <Compile Include="Util\ConfigurationOrderBySelectLimit.cs" />
+    <Compile Include="Util\ConfigurationOrderByWhere.cs" />
+    <Compile Include="Util\ConfigurationOrderByWherePagination.cs" />
+    <Compile Include="Util\ConfigurationOrderByWherePaginationSelect.cs" />
+    <Compile Include="Util\ConfigurationOrderByWhereSelect.cs" />
+    <Compile Include="Util\ConfigurationOrderByWhereSelectLimit.cs" />
+    <Compile Include="Util\ConfigurationWhere.cs" />
+    <Compile Include="Util\ConfigurationWhereLimit.cs" />
+    <Compile Include="Util\ConfigurationWhereSelect.cs" />
+    <Compile Include="Util\ConfigurationWhereSelectLimit.cs" />
+    <Compile Include="Util\GroupOrderBy.cs" />
+    <Compile Include="Util\GroupWhere.cs" />
+    <Compile Include="Util\Order.cs" />
+    <Compile Include="Util\Select.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\PagedList.css" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

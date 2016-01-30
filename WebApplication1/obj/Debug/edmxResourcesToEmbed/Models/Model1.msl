@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BaseEFModelStoreContainer" CdmEntityContainer="BaseEFEntities">
+    <EntitySetMapping Name="Notice">
+      <EntityTypeMapping TypeName="BaseEFModel.Notice">
+        <MappingFragment StoreEntitySet="Notice">
+          <ScalarProperty Name="TagId" ColumnName="TagId" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Texto" ColumnName="Texto" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tags">
+      <EntityTypeMapping TypeName="BaseEFModel.Tags">
+        <MappingFragment StoreEntitySet="Tags">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

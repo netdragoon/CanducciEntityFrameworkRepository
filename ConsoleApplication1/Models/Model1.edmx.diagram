@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d29eec49a3f24e8182f46cca89d0c127" Name="Diagram1">
+        <EntityTypeShape EntityType="BaseEFModel.Clientes" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BaseEFModel.Notice" Width="1.5" PointX="5" PointY="5" />
+        <EntityTypeShape EntityType="BaseEFModel.People" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BaseEFModel.Soma" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BaseEFModel.Tags" Width="1.5" PointX="2.625" PointY="5.75" />
+        <EntityTypeShape EntityType="BaseEFModel.Telefones" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="BaseEFModel.Tipo" Width="1.5" PointX="0.75" PointY="1.375" />
+        <AssociationConnector Association="BaseEFModel.FK_Telefones_Telefones" />
+        <AssociationConnector Association="BaseEFModel.FK_Notice_Tags" />
+        <AssociationConnector Association="BaseEFModel.FK_Telefones_Tipo" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

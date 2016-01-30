@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BaseEFModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Notice">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Texto" Type="text" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="TagId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="People">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Birthday" Type="date" />
+    <Property Name="Value" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Soma">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+    <Property Name="Valor" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tags">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Telefones">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClienteId" Type="int" Nullable="false" />
+    <Property Name="Ddd" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="Numero" Type="nvarchar" MaxLength="12" Nullable="false" />
+    <Property Name="TipoId" Type="int" />
+  </EntityType>
+  <EntityType Name="Tipo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descricao" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Notice_Tags">
+    <End Role="Tags" Type="Self.Tags" Multiplicity="1" />
+    <End Role="Notice" Type="Self.Notice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tags">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Notice">
+        <PropertyRef Name="TagId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Telefones_Telefones">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
+    <End Role="Telefones" Type="Self.Telefones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Telefones">
+        <PropertyRef Name="ClienteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Telefones_Tipo">
+    <End Role="Tipo" Type="Self.Tipo" Multiplicity="0..1" />
+    <End Role="Telefones" Type="Self.Telefones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Telefones">
+        <PropertyRef Name="TipoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BaseEFModelStoreContainer">
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notice" EntityType="Self.Notice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="People" EntityType="Self.People" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Soma" EntityType="Self.Soma" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tags" EntityType="Self.Tags" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Telefones" EntityType="Self.Telefones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tipo" EntityType="Self.Tipo" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Notice_Tags" Association="Self.FK_Notice_Tags">
+      <End Role="Tags" EntitySet="Tags" />
+      <End Role="Notice" EntitySet="Notice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Telefones_Telefones" Association="Self.FK_Telefones_Telefones">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Telefones" EntitySet="Telefones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Telefones_Tipo" Association="Self.FK_Telefones_Tipo">
+      <End Role="Tipo" EntitySet="Tipo" />
+      <End Role="Telefones" EntitySet="Telefones" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

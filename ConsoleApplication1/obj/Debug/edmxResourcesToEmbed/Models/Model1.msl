@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BaseEFModelStoreContainer" CdmEntityContainer="BaseEFEntities">
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="BaseEFModel.Clientes">
+        <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notice">
+      <EntityTypeMapping TypeName="BaseEFModel.Notice">
+        <MappingFragment StoreEntitySet="Notice">
+          <ScalarProperty Name="TagId" ColumnName="TagId" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Texto" ColumnName="Texto" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="BaseEFModel.People">
+        <MappingFragment StoreEntitySet="People">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Soma">
+      <EntityTypeMapping TypeName="BaseEFModel.Soma">
+        <MappingFragment StoreEntitySet="Soma">
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tags">
+      <EntityTypeMapping TypeName="BaseEFModel.Tags">
+        <MappingFragment StoreEntitySet="Tags">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Telefones">
+      <EntityTypeMapping TypeName="BaseEFModel.Telefones">
+        <MappingFragment StoreEntitySet="Telefones">
+          <ScalarProperty Name="TipoId" ColumnName="TipoId" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Ddd" ColumnName="Ddd" />
+          <ScalarProperty Name="ClienteId" ColumnName="ClienteId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo">
+      <EntityTypeMapping TypeName="BaseEFModel.Tipo">
+        <MappingFragment StoreEntitySet="Tipo">
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

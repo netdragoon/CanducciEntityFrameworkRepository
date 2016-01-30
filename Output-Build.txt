@@ -1,0 +1,15 @@
+﻿1>------ Build started: Project: Canducci.EntityFramework.Repository, Configuration: Debug Any CPU ------
+2>------ Build started: Project: Canducci.EntityFramework.Repository40, Configuration: Debug Any CPU ------
+3>------ Build started: Project: Canducci.EntityFramework.Repository451, Configuration: Debug Any CPU ------
+4>------ Build started: Project: Canducci.EntityFramework.Repository452, Configuration: Debug Any CPU ------
+2>  Canducci.EntityFramework.Repository40 -> D:\PackageNet\Canducci.EntityFramework.Repository\Canducci.EntityFramework.Repository40\bin\Debug\Canducci.EntityFramework.Repository.dll
+4>  Canducci.EntityFramework.Repository452 -> D:\PackageNet\Canducci.EntityFramework.Repository\Canducci.EntityFramework.Repository452\bin\Debug\Canducci.EntityFramework.Repository.dll
+3>  Canducci.EntityFramework.Repository451 -> D:\PackageNet\Canducci.EntityFramework.Repository\Canducci.EntityFramework.Repository451\bin\Debug\Canducci.EntityFramework.Repository.dll
+5>------ Build started: Project: ConsoleApplication1, Configuration: Debug Any CPU ------
+1>  Canducci.EntityFramework.Repository -> D:\PackageNet\Canducci.EntityFramework.Repository\Canducci.EntityFramework.Repository\bin\Debug\Canducci.EntityFramework.Repository.dll
+6>------ Build started: Project: WebApplication1, Configuration: Debug Any CPU ------
+7>------ Build started: Project: Canducci.EntityFramework.ConsoleAppTest, Configuration: Debug Any CPU ------
+7>  Canducci.EntityFramework.ConsoleAppTest -> D:\PackageNet\Canducci.EntityFramework.Repository\Canducci.EntityFramework.ConsoleAppTest\bin\Debug\Canducci.EntityFramework.ConsoleAppTest.exe
+5>  ConsoleApplication1 -> D:\PackageNet\Canducci.EntityFramework.Repository\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+6>  WebApplication1 -> D:\PackageNet\Canducci.EntityFramework.Repository\WebApplication1\bin\WebApplication1.dll
+========== Build: 7 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
