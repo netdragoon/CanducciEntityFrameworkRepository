@@ -1,5 +1,4 @@
-﻿using Canducci.EntityFramework.Repository.Util;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 #if NET45
@@ -48,7 +47,7 @@ namespace Canducci.EntityFramework.Repository.Contracts.Interfaces
         Task<IList<TResult>> AllAsync<TConfiguration, TResult>(Action<TConfiguration> configuration)
             where TConfiguration : IConfiguration<T, TResult>;
 
-
 #endif
+
     }
 }

@@ -1,9 +1,6 @@
 ﻿using Canducci.EntityFramework.Repository.Contracts.Interfaces;
-using Canducci.EntityFramework.Repository.Util;
 using System;
 using System.Data.Entity;
-using System.Linq;
-
 namespace Canducci.EntityFramework.Repository.Contracts
 {
     public interface IRepository<T, C>: 

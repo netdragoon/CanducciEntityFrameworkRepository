@@ -17,6 +17,8 @@ namespace ConsoleApplication1
             BaseEFEntities c1 = new BaseEFEntities();
             c1.Database.Log = Log => TextSQL(Log);
 
+            
+
             //RepositoryClientesContract repClientes = new RepositoryClientes(c1);
             RepositoryTelefonesContract repTelefones = new RepositoryTelefones(c1);
             //RepositorySomaContract repSoma = new RepositorySoma(c1);

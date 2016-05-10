@@ -85,7 +85,7 @@ namespace WebApplication1.Controllers
 
         [HttpPost()]
         public async Task<ActionResult> Edit(int id, Notice notice)
-        {
+        {            
             await repository.EditAsync(notice);            
             return RedirectToAction("Index");
         }

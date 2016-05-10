@@ -31,6 +31,7 @@ namespace Canducci.EntityFramework.Repository.Contracts.Interfaces
         long? Sum(Expression<Func<T, bool>> where, Expression<Func<T, long?>> selector);
 
 #if NET45
+
         Task<decimal> SumAsync(Expression<Func<T, decimal>> selector);
         Task<decimal?> SumAsync(Expression<Func<T, decimal?>> selector);
         Task<double> SumAsync(Expression<Func<T, double>> selector);
@@ -52,6 +53,7 @@ namespace Canducci.EntityFramework.Repository.Contracts.Interfaces
         Task<int?> SumAsync(Expression<Func<T, bool>> where, Expression<Func<T, int?>> selector);
         Task<long> SumAsync(Expression<Func<T, bool>> where, Expression<Func<T, long>> selector);
         Task<long?> SumAsync(Expression<Func<T, bool>> where, Expression<Func<T, long?>> selector);
+
 #endif
     }
 }

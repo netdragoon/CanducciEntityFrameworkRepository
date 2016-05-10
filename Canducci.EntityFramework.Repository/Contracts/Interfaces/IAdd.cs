@@ -7,10 +7,11 @@ namespace Canducci.EntityFramework.Repository.Contracts.Interfaces
     public interface IAdd<T>
         where T : class, new()
     {
-        T Add(T Model);        
+        T Add(T model);        
         IEnumerable<T> Add(IEnumerable<T> models);
+
 #if NET45
-        Task<T> AddAsync(T Model);
+        Task<T> AddAsync(T model);
         Task<IEnumerable<T>> AddAsync(IEnumerable<T> models);
 #endif
 
